@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.7.0'
+ruby '2.7.4'
 gem 'rails', '4.2.9'
+
+# without this gem the app would crash before starting
+gem 'bigdecimal', '1.3.5'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
@@ -11,7 +14,7 @@ group :development, :test do
   gem 'capybara', '2.4.4'
   gem 'launchy'
   gem 'rspec-rails', '3.3.2'
-  gem 'ZenTest', '4.11.0'
+  gem 'ZenTest', '4.11.2' # was '4.11.0'
 end
 
 group :test do
