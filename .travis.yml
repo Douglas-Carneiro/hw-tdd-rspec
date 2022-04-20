@@ -15,8 +15,13 @@ before_install:
   - $CCTR before-build
 script:
   - bundle exec rake db:setup
+<<<<<<< HEAD
   - bundle exec rake spec
-  - $CCTR format-coverage -t simplecov --output coverage/codeclimate.$SUITE.json
+  - $CCTR format-coverage --output coverage/codeclimate.$SUITE.json
+=======
+  - bundle exec rake rspec
+  - $CCTR format-coverage --output coverage/codeclimate.$SUITE.json
+>>>>>>> parent of bb09299 (fix rspec command)
   - bundle exec rake cucumber
   - $CCTR format-coverage --output coverage/codeclimate.$SUITE.json
 after_script:
